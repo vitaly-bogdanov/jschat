@@ -1,0 +1,14 @@
+{
+  "name": "jschat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server-dev": "yarn --cwd ./server dev",
+    "client-dev": "yarn --cwd ./client start",
+    "dev": "concurrently \"yarn server-dev\" \"yarn client-dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  }
+}
