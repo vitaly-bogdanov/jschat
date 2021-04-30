@@ -1,10 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "websocket.js",
+  "description": "три способа построения realtime приложений: longpulling, eventsource, websocket",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "longpulling": "nodemon ./longpulling.js",
+    "eventsource": "nodemon ./eventsource.js",
+    "websocket": "nodemon ./websocket.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "ws": "^7.4.5"
   },

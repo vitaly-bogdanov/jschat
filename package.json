@@ -4,9 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server-dev": "yarn --cwd ./server dev",
-    "client-dev": "yarn --cwd ./client start",
-    "dev": "concurrently \"yarn server-dev\" \"yarn client-dev\""
+    "server-longpulling": "yarn --cwd ./server longpulling",
+    "server-eventsource": "yarn --cwd ./server eventsource",
+    "server-websocket": "yarn --cwd ./server websocket",
+
+    "client": "yarn --cwd ./client start",
+
+    "longpulling": "concurrently \"yarn server-longpulling\" \"yarn client\"",
+    "eventsource": "concurrently \"yarn server-eventsource\" \"yarn client\"",
+    "websocket": "concurrently \"yarn server-websocket\" \"yarn client\""
   },
   "devDependencies": {
     "concurrently": "^6.0.2"
